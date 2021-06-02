@@ -43,6 +43,7 @@ class MainActivity : AppCompatActivity() {
         HyBid.initialize(hybidAppToken, application) { cmpSuccess ->
             Log.d(TAG, "HyBid SDK initialised.")
         }
+        HyBid.setInterstitialSkipOffset(5)
 
         val mopubSdkConfiguration = SdkConfiguration.Builder(mopubInitAdUnit).build()
         MoPub.initializeSdk(this, mopubSdkConfiguration) {
